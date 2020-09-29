@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/windows:1903
+
+SHELL ["powershell"]
+
+ADD https://aka.ms/vs/16/release/vc_redist.x64.exe vc_redist.x64.exe
+RUN Start-Process -Wait C:\vc_redist.x64.exe -ArgumentList "/install", "/quiet", "/norestart"
+
+WORKDIR C:\\shareddata
+COPY ./Converter .
+
+CMD [ "powershell.exe" ]
+

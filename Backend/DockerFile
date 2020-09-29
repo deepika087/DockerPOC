@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+
+WORKDIR /shareddata
+
+COPY ./publish .
+
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "InvokeExe.dll"]
+# ENTRYPOINT cmd
