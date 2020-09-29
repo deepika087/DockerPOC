@@ -78,5 +78,6 @@ kubectl exec --stdin --tty backend-podName-cv2tj -- /bin/bash
 
 Go to http://localhost:8081/weatherforecast. The "summary" field of weatherforecast data model is returned from the backend.  
 To verify the backend only, go to  http://localhost:8080/invokeexe
+Tip: although the documentation says that writing imageName:latest and setting imagePolicy to Never will fetch the latest from local but that doesn’t work.  
 
  
